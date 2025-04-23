@@ -1,0 +1,15 @@
+package permit.generated.conditionset.rules
+
+import future.keywords.in
+
+import data.permit.generated.abac.utils.attributes
+import data.permit.generated.abac.utils.condition_set_permissions
+import data.permit.generated.conditionset
+
+default Data_5f5fAnalysts_5f5fbased_5f5fin_5f5fthe_5f5fUS_5fon_5fservice_5f_5f5f_5f5fautogen_5f5fservice = false
+
+Data_5f5fAnalysts_5f5fbased_5f5fin_5f5fthe_5f5fUS_5fon_5fservice_5f_5f5f_5f5fautogen_5f5fservice {
+	conditionset.userset_Data_5fAnalysts_5fbased_5fin_5fthe_5fUS
+	conditionset.resourceset__5f_5fautogen_5fservice
+	input.action in condition_set_permissions.Data_Analysts_based_in_the_US.__autogen_service[input.resource.type]
+}

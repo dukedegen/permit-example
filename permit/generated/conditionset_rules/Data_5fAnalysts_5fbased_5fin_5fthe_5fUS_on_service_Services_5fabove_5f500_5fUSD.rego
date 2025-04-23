@@ -1,0 +1,15 @@
+package permit.generated.conditionset.rules
+
+import future.keywords.in
+
+import data.permit.generated.abac.utils.attributes
+import data.permit.generated.abac.utils.condition_set_permissions
+import data.permit.generated.conditionset
+
+default Data_5f5fAnalysts_5f5fbased_5f5fin_5f5fthe_5f5fUS_5fon_5fservice_5fServices_5f5fabove_5f5f500_5f5fUSD = false
+
+Data_5f5fAnalysts_5f5fbased_5f5fin_5f5fthe_5f5fUS_5fon_5fservice_5fServices_5f5fabove_5f5f500_5f5fUSD {
+	conditionset.userset_Data_5fAnalysts_5fbased_5fin_5fthe_5fUS
+	conditionset.resourceset_Services_5fabove_5f500_5fUSD
+	input.action in condition_set_permissions.Data_Analysts_based_in_the_US.Services_above_500_USD[input.resource.type]
+}
