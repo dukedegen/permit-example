@@ -1,0 +1,15 @@
+package permit.generated.conditionset.rules
+
+import future.keywords.in
+
+import data.permit.generated.abac.utils.attributes
+import data.permit.generated.abac.utils.condition_set_permissions
+import data.permit.generated.conditionset
+
+default Engineers_5f5fbased_5f5foutside_5f5fof_5f5fthe_5f5fUS_5fon_5ffile_5f_5f5f_5f5fautogen_5f5ffile = false
+
+Engineers_5f5fbased_5f5foutside_5f5fof_5f5fthe_5f5fUS_5fon_5ffile_5f_5f5f_5f5fautogen_5f5ffile {
+	conditionset.userset_Engineers_5fbased_5foutside_5fof_5fthe_5fUS
+	conditionset.resourceset__5f_5fautogen_5ffile
+	input.action in condition_set_permissions.Engineers_based_outside_of_the_US.__autogen_file[input.resource.type]
+}
