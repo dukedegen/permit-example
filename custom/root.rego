@@ -1,5 +1,7 @@
 package permit.custom
 
+import data.permit.policies
+
 default allow := false
 
 # You can find the official Rego tutorial at:
@@ -14,3 +16,9 @@ default allow := false
 #     # if my_custom_rule is true, EVEN IF policies.allow is false.
 #     my_custom_rule
 # }
+
+allow {
+	input.user.key == "test@permit.io"
+	print(policies.__allow_sources)
+	print(data.role_permissions)
+}
