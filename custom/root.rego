@@ -20,5 +20,7 @@ default allow := false
 allow {
 	input.user.key == "test@permit.io"
 	print(policies.__allow_sources)
-	print(data)
+	print(data.role_permissions)
+    print(data.rebac_roles)
+
 }
