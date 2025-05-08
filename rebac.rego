@@ -71,7 +71,11 @@ scoped_users_obj := result {
 default allow := false
 
 allow {
-  print(rebac_roles)
+  print("rebac_roles:", rebac_roles)
+  print("data.roles_resource:", data.roles_resource)
+  print("scoped_users_obj", scoped_users_obj)
+  print("rebac_roles_result", rebac_roles_result)
+  print("_rebac_data", _rebac_data)
 	rbac.allow with rbac.user_roles as rebac_roles
 		with data.roles_resource as input.resource.type
 }
