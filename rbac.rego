@@ -16,6 +16,11 @@ default allow := false
 
 # Allow the action if the user is granted permission to perform the action.
 allow {
+	print("rbac - input:", input)
+	print("rbac - data.users:", data.users)
+	print("rbac - data.role_permissions:", data.role_permissions)
+	print("rbac - roles_resource:", roles_resource)
+	print("rbac - data.roles_resource:", data.roles_resource)
 	count(matching_grants) > 0
 }
 
